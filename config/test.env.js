@@ -4,5 +4,5 @@ const prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"production"',
-  SERVICE_URL: '"https://qmobile.hdfax.com/"'
+  SERVICE_URL: '"https://qmobile.morgan.com/"'
 })

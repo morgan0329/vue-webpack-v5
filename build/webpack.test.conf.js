@@ -93,11 +93,11 @@ const webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ]) /* ,
+    ]),
     new ZipPlugin({
       path:path.join(__dirname,'../dist'),
-      filename: 'template.zip'
-    }) */
+      filename: 'template' + parseInt(Math.random() * 100000000) + '.zip'
+    })
   ]
 })
 
