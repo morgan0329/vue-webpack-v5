@@ -1,0 +1,56 @@
+
+.toastMask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.toastMain {
+  position: fixed;
+  z-index: 5000;
+  width: 7.6em;
+  min-height: 2.6em;
+  top: 180px;
+  left: 50%;
+  margin-left: -3.8em;
+  background: rgba(17, 17, 17, 0.7);
+  text-align: center;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.headerBar {
+  width: 100%;
+  height: 2rem;
+  background: #000;
+  text-align: center;
+  line-height: 2rem;
+  position: relative;
+}
+
+
+.mainImageDiv img {
+  width: 100%
+}
+
+.textDiv {
+  margin-top: -15rem;
+  text-align: center;
+}
+
+.downloadDiv {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.downloadImg {
+  width: 12rem;
+}
+
+.margin-top-1 {
+  margin-top: -1rem;
+  height: 6rem;
+}
