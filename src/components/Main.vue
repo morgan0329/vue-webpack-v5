@@ -87,7 +87,7 @@ import Encryptor from '../encryption/encryptor'
 
 import '../css/index.css'
 
-// var indexData = require('../../static/index.json')
+const baseUrl = (process.env && process.env.SERVICE_URL) || '/'
 
 export default {
   name: 'MainH',
@@ -101,8 +101,8 @@ export default {
     }
   },
   created () {
-    this.mainTopImageURL = window.indexData.image.mainTopImageURL
-    this.downloadBtn = window.indexData.image.downloadBtn
+    this.mainTopImageURL = window.initData.image.mainTopImageURL
+    this.downloadBtn = window.initData.image.downloadBtn
   },
   methods: {
     startCount: function () {
@@ -146,7 +146,7 @@ export default {
       var vueObj = this
 
       $.ajax({
-        url: 'https://qmobile.hdfax.com/mtp/h5/v1/login/op_verify_login_mobile',
+        url: baseUrl + 'mtp/h5/v1/login/op_verify_login_mobile',
         type: 'post',
         dataType: 'json',
         cache: false,
@@ -189,7 +189,7 @@ export default {
         return
       }
       $.ajax({
-        url: 'https://qmobile.hdfax.com/mtp/h5/v2/register/op_register_apply_sms_code',
+        url: baseUrl + 'mtp/h5/v2/register/op_register_apply_sms_code',
         type: 'post',
         dataType: 'json',
         cache: false,
@@ -224,7 +224,7 @@ export default {
       var vueObj = this
 
       $.ajax({
-        url: 'https://qmobile.hdfax.com/mtp/h5/v1/util/op_challenge_captcha',
+        url: baseUrl + 'mtp/h5/v1/util/op_challenge_captcha',
         type: 'post',
         dataType: 'json',
         success: function (res) {
@@ -256,7 +256,7 @@ export default {
 
     submitRegistration: function () {
       var vueObj = this
-      Encryptor.doAsyncEncryptByMd5('https://qmobile.hdfax.com/mtp/h5/v1/tpsecurity/op_password_apply_tpsecurity',
+      Encryptor.doAsyncEncryptByMd5(baseUrl + 'mtp/h5/v1/tpsecurity/op_password_apply_tpsecurity',
                    $('#password').val(),
                    vueObj.doRegistration,
                    function (res) {
@@ -270,7 +270,7 @@ export default {
       $('#registerByTpk').val(byTpk)
 
       $.ajax({
-        url: 'https://qmobile.hdfax.com/mtp/h5/v1/register/op_register_mobile_user',
+        url: baseUrl + 'mtp/h5/v1/register/op_register_mobile_user',
         type: 'post',
         dataType: 'json',
         xhrFields: {

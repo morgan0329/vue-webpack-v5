@@ -15,18 +15,7 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
 
-    
-    <div id="jsonFile" data="./static/index.json" style="display:none"></div>
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $.ajax({
-        url: '/static/index.json',
-        type: 'get',
-        success: function (resp) {
-          window.indexData = resp
-        }
-      })
-    </script>
+    <script type="text/javascript" src="/static/data.js"></script>
   </body>
 
 

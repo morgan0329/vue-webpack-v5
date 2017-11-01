@@ -33,9 +33,9 @@ export default {
     }
   },
   created () {
-    this.successBackground1 = window.indexData.image.successBackground1
-    this.successBackground2 = window.indexData.image.successBackground2
-    this.successBackground3 = window.indexData.image.successBackground3
+    this.successBackground1 = window.initData.image.successBackground1
+    this.successBackground2 = window.initData.image.successBackground2
+    this.successBackground3 = window.initData.image.successBackground3
   },
   methods: {
   }
