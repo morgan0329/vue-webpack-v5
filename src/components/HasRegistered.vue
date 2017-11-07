@@ -22,8 +22,6 @@
 </template>
 
 <script>
-// var indexData = require('../../static/index.json')
-
 export default {
   name: 'SuccessH',
   data () {
